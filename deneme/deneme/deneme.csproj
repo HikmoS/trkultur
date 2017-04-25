@@ -67,6 +67,9 @@
   <ItemGroup>
     <Content Include="haber.aspx" />
     <Content Include="images\1.jpg" />
+    <Content Include="images\1200x400.png" />
+    <Content Include="images\alibaba-ceo-su-yapay-zeka-sirketleri-bizden-daha-iyi-yonetecek-1493139490.jpg" />
+    <Content Include="images\galaksinin-koruyuculari-nin-yildizi-zoe-saldana-avengers-in-4-filminin-ismini-agzindan-kacirdi-1493130976.jpg" />
     <Content Include="packages.config" />
     <Content Include="main.Master" />
     <Content Include="Anasayfa.aspx" />

@@ -4,45 +4,48 @@ body {
     padding:0;
 }
 
+
 * {
 padding:0;
 margin:0;
 }
 
+
 ul,li
 {
     list-style-type:none;
 }
-.container {
+
+
+
+.container 
+{
     width: 980px;
     height: auto;
     margin: 0 auto;
-    
+    margin-top:120px;  
 }
 
-.banner {
-    width: 900px;
-    height: 480px;
-    position: relative;
-    margin: 50px auto;
-}
 
-.icerik {
+
+
+.icerik 
+{
     width: 640px;
     height: 50px;
     text-align: center;
     line-height: 50px;
-    margin: 120px auto;
+    margin:40px auto;
     float: left;
 }
 
     .icerik .haber-wrap {
         box-shadow: 2px 2px 6px #000;
-        margin: 50px auto;
+        margin:50px auto;
         font-family: 'Lato', sans-serif;
         
     }
-        .icerik .haber-wrap .baslik {
+    .icerik .haber-wrap .baslik {
             text-align: center;
             padding: 10px;
             font-size: 20px;
@@ -54,20 +57,26 @@ ul,li
         font-size: 15px;
     }
 
-        .icerik .haber-wrap .tarih {            
+    .icerik .haber-wrap .tarih {            
             text-align:left;                
             font-size: 10px;
         }
 
-.sag {
+
+
+.sag 
+{
     position:inherit;
     width: 300px;
     height: auto;
-    margin: 150px 0 0 150px;
+    margin: 70px 0 0 150px;
     padding: 20px;
     float:left;
 }
- .sagalt {
+ 
+
+.sagalt 
+{
     box-shadow: 2px 2px 6px #000;
     width: 300px;
     height: auto;
@@ -76,13 +85,19 @@ ul,li
     float: right;
     margin-top: 50px;
 }
-    .sagalt .yhaber-wrap {
+
+
+    .sagalt .yhaber-wrap 
+    {
         font-family: 'Lato', sans-serif;
         font-size: 15px;
        
     }
 
-.sagust {
+
+
+.sagust 
+{
     box-shadow: 2px 2px 6px #000;
     width: 300px;
     height: auto;
@@ -90,21 +105,14 @@ ul,li
     padding: 20px;
     float: right;
 }
-    .sagust .okunan-wrap {
+    
+
+.sagust .okunan-wrap 
+    {
         font-family: 'Lato', sans-serif;
         font-size: 15px;
     }
 
-
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 120px; /* footer yüksekliği */
-    background: #6cf;
-    text-align: center;
-}
  .img
  {
      padding:30px;
@@ -152,6 +160,39 @@ footer {
         margin-left:850px;
         margin-top:-140px;
     }
+}
+
+
+
+#myCarousel .nav a small {
+    display: block;
+}
+
+#myCarousel .nav {
+    background: #eee;
+}
+
+.nav-justified > li > a {
+    border-radius: 0px;
+}
+
+.nav-pills > li[data-slide-to="0"].active a {
+    background-color: #16a085;
+}
+
+.nav-pills > li[data-slide-to="1"] a:hover{
+    background-color: #e67e22;
+}
+
+.nav-pills > li[data-slide-to="2"] a:hover {
+    background-color: #2980b9;
+}
+
+.nav-pills > li[data-slide-to="3"] a:hover{
+    background-color: #8e44ad;
+}
+.nav-pills > li[data-slide-to="4"] a:hover {
+    background-color:#2980b9;
 }
 
 

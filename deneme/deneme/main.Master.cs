@@ -49,7 +49,7 @@ namespace deneme
         private void haber()
         {
             SqlConnection cnn = new SqlConnection(ConfigurationManager.ConnectionStrings["mydata"].ConnectionString);
-            string sorgu = "Select * from gündem order by tarih";
+            string sorgu = "SELECT * FROM gündem ORDER by tarih";
             SqlCommand cmd = new SqlCommand(sorgu, cnn);
             cnn.Open();
 

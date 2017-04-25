@@ -16,40 +16,40 @@
 <script src="http://bxslider.com/lib/jquery.bxslider.js"></script>
 <link href="http://bxslider.com/lib/jquery.bxslider.css" rel="stylesheet" />
 
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
 </head>
-<body style="background-color:#494242;">
+<body>
     
         
-        <nav class="navbar navbar-inverse" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation"  >
   
-  <div class="navbar-header">
+  <div class="navbar-header"  >
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="#">SİTE ADI</a>
   </div>
 
  
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li class="active"><a href="#">Anasayfa</a></li>
+      <li><a href="#">Teknoloji</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kültür ve Sanat <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Kitap</a></li>
+          <li><a href="#">Dizi</a></li>
+          <li><a href="#">Sinema</a></li>
           <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-          <li class="divider"></li>
-          <li><a href="#">One more separated link</a></li>
+          <li><a href="#">Müzik</a></li>
+          
         </ul>
       </li>
     </ul>
@@ -64,15 +64,15 @@
         </form>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
+      <li><a href="#">Hakkında</a></li>
+      <li><a href="#">İletişim</a></li>
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oyun <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="#">FPS</a></li>
+          <li><a href="#">RPG</a></li>
+          <li><a href="#">Moba</a></li>
+          
         </ul>
       </li>
     </ul>
@@ -80,23 +80,87 @@
 </nav>
 	
 	
-     <div class="container">
+     
 	
 	
-	<div class="banner">
+	
 		
-			<ul class="bxslider">
-              <li><img src="/images/1.jpg"  Width="900" Height="480"/></li>
-               <li><img src="http://orig05.deviantart.net/8a03/f/2014/320/6/7/twitch_banner_by_ar91gfx-d86oyx6.png"  Width="980" Height="480"/></li>
-             <li><img src="http://img-cache.cdn.gaiaonline.com/b0bb581e91a2760c293f2964fb5d4bb7/http://i1025.photobucket.com/albums/y320/Reko_Soomthing_Wolfe/twitch%20banner_zpswrtwaqj2.png"  Width="900" Height="480"/></li>
-            <li><img src="https://mlpforums.com/uploads/post_images/img-2952127-1-1eNEXXs.jpg"  Width="900" Height="480"/></li>
-        </ul>			
-		
-	</div>
+  <div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/1200x400.png" />
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                       Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <img src="images/1200x400.png" />
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <img src="images/1200x400.png" />
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <img src="images/1200x400.png" />
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum  Lorem ipsum Lorem ipsum</p>
+                </div>
+            </div>
+            <!-- End Item -->
+
+            <div class="item">
+                <img src="images/1200x400.png" />
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- End Carousel Inner -->
+        <ul class="nav nav-pills nav-justified">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem
+                ipsum dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="1"><a href="#">Oyun<small>Lorem ipsum
+                dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="2"><a href="#">Kültür ve Sanat<small>Lorem ipsum
+                dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="3"><a href="#">Dizi<small>Lorem ipsum
+                dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="4"><a href="#">Sinema<small>Lorem ipsum
+                dolor sit</small></a></li>
+        </ul>
+    </div>
+    <!-- End Carousel -->
+</div>
 	
-	
-	
-	
+	<div class="container">
+
+    
 		<div class="icerik">
 						
 			<asp:ListView ID="lsthaber" runat="server">
@@ -179,9 +243,29 @@
 </div>
 	
  <script>
-     $(document).ready(function () {
-         $('.bxslider').bxSlider();
+     jQuery(document).ready(function ($) {
+
+         $('#myCarousel').carousel({
+             interval: 5000
+         });
+
+         $('#carousel-text').html($('#slide-content-0').html());
+
+         //Handles the carousel thumbnails
+         $('[id^=carousel-selector-]').click(function () {
+             var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+             var id = parseInt(id);
+             $('#myCarousel').carousel(id);
+         });
+
+
+         // When the carousel slides, auto update the text
+         $('#myCarousel').on('slid.bs.carousel', function (e) {
+             var id = $('.item.active').data('slide-number');
+             $('#carousel-text').html($('#slide-content-' + id).html());
+         });
      });
+
         </script>
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
