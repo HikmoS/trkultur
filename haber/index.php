@@ -165,18 +165,15 @@ require_once("uncludes/config.php");
 			
 			<?php
 				
-				$veri = $db -> query("SELECT *FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
+				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
-						print $row["HaberBaslik"]."</br>";
-			?>		
-			
-			
-			<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" />
-			
-			<?php
-			print $row["HaberTarih"]."</br>";
-						
+						?>	
+						<h3><div class="baslik"><?php print $row["HaberBaslik"];?></div></h3>
+						<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" /></a>
+						<div class="tarih"><?php  print $row["HaberTarih"];?></div>
+		
+						<?php
 					}
 				}
 				
@@ -185,7 +182,7 @@ require_once("uncludes/config.php");
         
 			
 		
-</div>
+		</div>
 	
         
         

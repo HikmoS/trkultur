@@ -85,10 +85,20 @@ require_once("uncludes/config.php");
                         <div class="okunan golge-efekti yuksek">
                             
                          <?php
-			
-							$veri = $db -> query("select * from haber_icerik where IcerikID=2") -> fetch();
-							echo $veri["Icerik"];
-						?>
+							$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
+							if($veri->rowCount()){
+								foreach($veri as $row){?>	
+						<h3><div class="baslik"><?php print $row["HaberBaslik"];?></div></h3>
+						<div class="icerik"><?php  print $row["Icerik"];?></div>
+		
+						<?php
+					}
+				}
+				
+				 
+				?>
+							
+						
                                                       
                      </div>
 
