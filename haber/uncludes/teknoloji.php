@@ -1,5 +1,5 @@
 <?php
-require_once("uncludes/config.php");
+require_once("config.php");
 ?>
 
 
@@ -7,7 +7,7 @@ require_once("uncludes/config.php");
 
 <html>
 <head>
-<title>Anasayfa</title>
+<title>Haber</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="css/style.css" rel="stylesheet" media="all"/>
@@ -38,7 +38,7 @@ require_once("uncludes/config.php");
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
       <li class="active"><a href="index.php">Anasayfa</a></li>
-      <li><a href="teknoloji.php">Teknoloji</a></li>
+      <li><a href="teknoloji">Teknoloji</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kültür ve Sanat <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -161,23 +161,20 @@ require_once("uncludes/config.php");
     
 		<div class="icerik golge-efekti yuksek">
 			
-			
+			<div class="baslik">
 			
 			<h3>
 			<?php
 			
-				$veri = $db -> query("select * from haber ",PDO::FETCH_ASSOC);
-				if($veri->rowCount()){
-					foreach($veri as $row){
-						print $row["HaberBaslik"]."</br>";
-					}
-				}
-				 
+				$veri = $db -> query("select * from haber") -> fetch();
+				 echo $veri["HaberBaslik"]
 				?>
+				
+				<div class="<?php echo $veri["HaberBaslik"];?>" />
 			
 			</h3>
 			
-			
+			</div>
 			<?php 
  
 				$resimler = $db->prepare("SELECT * FROM haber_icerik");
@@ -189,7 +186,7 @@ require_once("uncludes/config.php");
       
 				?>
             
-				<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" /></a>
+				<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" />
   
 				<?php 
 				}
@@ -200,17 +197,19 @@ require_once("uncludes/config.php");
  
 							}
 			?>
+			<div class="img">
 			
+			</div>
+			
+			<div clasS="haber">
+			<?php
+			
+				$veri = $db -> query("select * from haber_icerik") -> fetch();
+				echo $veri["Icerik"];
+			?>
+			</div>
 			
 			<div class="tarih">
-			<?php
-				$veri = $db -> query("select * from haber ",PDO::FETCH_ASSOC);
-				if($veri->rowCount()){
-					foreach($veri as $row){
-						print $row["HaberTarih"]."</br>";
-					}
-				}
-				?>
 			</div>
         
 			
@@ -261,13 +260,13 @@ require_once("uncludes/config.php");
 
 
 
-<!--<footer >
+<footer >
 
 <div class="golge-efekti yuksek">
 <p>Lorem ipsum dolor sit</p>
 </div>
 
-</footer> -->
+</footer> 
 
 
 

@@ -7,10 +7,10 @@ require_once("uncludes/config.php");
 
 <html>
 <head>
-<title>Anasayfa</title>
+<title>Teknoloji</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="css/style.css" rel="stylesheet" media="all"/>
+<link href="css/style2.css" rel="stylesheet" media="all"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -78,82 +78,6 @@ require_once("uncludes/config.php");
 </nav>
 	
 	
-     
-	
-	
-	
-		
-  
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
-                <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                       Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-            </div>
-            <!-- End Item -->
-            <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
-                <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-            </div>
-            <!-- End Item -->
-            <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
-                <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-            </div>
-            <!-- End Item -->
-            <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
-                <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum  Lorem ipsum Lorem ipsum</p>
-                </div>
-            </div>
-            <!-- End Item -->
-
-            <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
-                <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                </div>
-            </div>
-
-        </div>
-        <!-- End Carousel Inner -->
-        <ul class="nav nav-pills nav-justified">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem
-                ipsum dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="1"><a href="#">Oyun<small>Lorem ipsum
-                dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="2"><a href="#">Kültür ve Sanat<small>Lorem ipsum
-                dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="3"><a href="#">Dizi<small>Lorem ipsum
-                dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="4"><a href="#">Sinema<small>Lorem ipsum
-                dolor sit</small></a></li>
-        </ul>
-    </div>
-    <!-- End Carousel -->
 
 	
 	
@@ -212,56 +136,18 @@ require_once("uncludes/config.php");
 				}
 				?>
 			</div>
-        
 			
-		
-</div>
-	
-        
-        
+			
+			
 	
 	
-
-	
-	<div class="sag">
- 
-  
-      <div class="golge-efekti yuksek">
-        <h3>Yeni haberler</h3>
-		<br>
-		<div class="baslik">
-			</div>
-			<div class="img">
-			</div>
-			<div clasS="haber">
-			</div>
-			<div class="tarih">
-			</div>
-
-
-
-      
-	  <h3>En çok okunan</h3>
-        <br>
-			<div class="baslik">
-			</div>
-			<div class="img">
-			</div>
-			<div clasS="haber">
-			</div>
-			<div class="tarih">
-			</div>
-				
-     
-
-	</div>
 	
 	
 </div>
 
 
 
-<!--<footer >
+<!-- <footer >
 
 <div class="golge-efekti yuksek">
 <p>Lorem ipsum dolor sit</p>
