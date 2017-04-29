@@ -87,60 +87,29 @@ require_once("uncludes/config.php");
 			
 			
 			
-			<h3>
-			<?php
 			
-				$veri = $db -> query("select * from haber ",PDO::FETCH_ASSOC);
+			
+			<?php
+				
+				$veri = $db -> query("SELECT *FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
 						print $row["HaberBaslik"]."</br>";
+			?>		
+			
+			
+			<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" />
+			
+			<?php
+			print $row["HaberTarih"]."</br>";
+						
 					}
 				}
+				
 				 
 				?>
 			
-			</h3>
 			
-			
-			<?php 
- 
-				$resimler = $db->prepare("SELECT * FROM haber_icerik");
-				$resimler->execute();
- 
-				if($resimler->rowCount()){
- 
-				foreach($resimler as $row){
-      
-				?>
-            
-				<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" /></a>
-  
-				<?php 
-				}
-					}
-				else{
- 
-					echo "Resim bulunamadı";
- 
-							}
-			?>
-			
-			
-			<div class="tarih">
-			<?php
-				$veri = $db -> query("select * from haber ",PDO::FETCH_ASSOC);
-				if($veri->rowCount()){
-					foreach($veri as $row){
-						print $row["HaberTarih"]."</br>";
-					}
-				}
-				?>
-			</div>
-			
-			
-			
-	
-	
 	
 	
 </div>
