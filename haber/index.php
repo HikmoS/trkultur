@@ -47,22 +47,12 @@ require_once("uncludes/config.php");
           <li><a href="#">Sinema</a></li>
           <li class="divider"></li>
           <li><a href="#">Müzik</a></li>
+		  
           
         </ul>
+		
       </li>
-    </ul>
-    <div class="col-sm-3 col-md-3">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="q"/>
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-        </div>
-        </form>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Hakkında</a></li>
+	  <li><a href="#">Hakkında</a></li>
       <li><a href="#">İletişim</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oyun <b class="caret"></b></a>
@@ -74,6 +64,17 @@ require_once("uncludes/config.php");
         </ul>
       </li>
     </ul>
+    <div class="nav navbar-nav navbar-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="q"/>
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+    
   </div><!-- /.navbar-collapse -->
 </nav>
 	
@@ -165,18 +166,15 @@ require_once("uncludes/config.php");
 			
 			<?php
 				
-				$veri = $db -> query("SELECT *FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
+				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
-						print $row["HaberBaslik"]."</br>";
-			?>		
-			
-			
-			<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" />
-			
-			<?php
-			print $row["HaberTarih"]."</br>";
-						
+						?>	
+						<h3><div class="baslik"><?php print $row["HaberBaslik"];?></div></h3>
+						<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" /></a>
+						<div class="tarih"><?php  print $row["HaberTarih"];?></div>
+		
+						<?php
 					}
 				}
 				
@@ -185,7 +183,7 @@ require_once("uncludes/config.php");
         
 			
 		
-</div>
+		</div>
 	
         
         

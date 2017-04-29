@@ -47,22 +47,12 @@ require_once("uncludes/config.php");
           <li><a href="#">Sinema</a></li>
           <li class="divider"></li>
           <li><a href="#">Müzik</a></li>
+		  
           
         </ul>
+		
       </li>
-    </ul>
-    <div class="col-sm-3 col-md-3">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="q"/>
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-        </div>
-        </form>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Hakkında</a></li>
+	  <li><a href="#">Hakkında</a></li>
       <li><a href="#">İletişim</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oyun <b class="caret"></b></a>
@@ -72,6 +62,20 @@ require_once("uncludes/config.php");
           <li><a href="#">Moba</a></li>
           
         </ul>
+      </li>
+    </ul>
+	
+    <div class="nav navbar-nav navbar-right">
+        <form class="navbar-form" role="search">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="q"/>
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        </form>
+    </div>
+    
       </li>
     </ul>
   </div><!-- /.navbar-collapse -->
