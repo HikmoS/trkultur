@@ -1,0 +1,56 @@
+.okunan {
+    
+    width: 980px;
+    height: auto;
+   
+}
+
+
+.golge-efekti {
+    background-color: #ffffff;
+    padding: 60px 0 20px;
+    font: 14px/1.5 Arial, sans-serif;
+    color: #666;
+    padding:6em;
+    text-shadow: 0px 1px 3px #fff;
+    text-align:left;
+    margin: 100px auto;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+    .golge-efekti:before,
+    .golge-efekti:after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+    }
+
+    .golge-efekti p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+.yuksek {
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.okunan .img
+{
+    padding-top:60px;
+    padding-bottom:30px;
+}
+.okunan .tarih{
+    line-height:10;
+}
+.okunan .haber {
+
+    line-height: 2;
+}
+.okunan .baslik {
+    font-size: 20px;
+    font-weight: bold;
+}
