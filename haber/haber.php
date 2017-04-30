@@ -42,11 +42,11 @@ require_once("uncludes/config.php");
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kültür ve Sanat <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Kitap</a></li>
-          <li><a href="#">Dizi</a></li>
-          <li><a href="#">Sinema</a></li>
+          <li><a href="kitap.php">Kitap</a></li>
+          <li><a href="dizi.php">Dizi</a></li>
+          <li><a href="sinema.php">Sinema</a></li>
           <li class="divider"></li>
-          <li><a href="#">Müzik</a></li>
+          <li><a href="müzik.php">Müzik</a></li>
 		  
           
         </ul>
@@ -54,15 +54,7 @@ require_once("uncludes/config.php");
       </li>
 	  <li><a href="#">Hakkında</a></li>
       <li><a href="#">İletişim</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oyun <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">FPS</a></li>
-          <li><a href="#">RPG</a></li>
-          <li><a href="#">Moba</a></li>
-          
-        </ul>
-      </li>
+     <li><a href="oyun.php">Oyun</a></li>
     </ul>
     <div class="nav navbar-nav navbar-right">
         <form class="navbar-form" role="search">

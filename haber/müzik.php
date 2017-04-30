@@ -54,7 +54,7 @@ require_once("uncludes/config.php");
       </li>
 	  <li><a href="#">Hakkında</a></li>
       <li><a href="#">İletişim</a></li>
-      <li><a href="oyun.php">Oyun</a></li>
+     <li><a href="oyun.php">Oyun</a></li>
     </ul>
 	
     <div class="nav navbar-nav navbar-right">
@@ -87,7 +87,7 @@ require_once("uncludes/config.php");
 			
 			<?php
 				
-				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID AND KategoriID=1",PDO::FETCH_ASSOC);
+				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID AND KategoriID=6",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
 						?>
@@ -115,6 +115,7 @@ require_once("uncludes/config.php");
 </div>
 
 </footer> -->
+
 
 
     

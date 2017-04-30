@@ -16,14 +16,6 @@ ul,li
 }
 
 
-
-.container 
-{
-    width: 1400px;
-    height: auto;
-    margin-top:120px;  
-}
-
 .carousel {
     width: 1400px;
     margin: 75px auto;
@@ -66,17 +58,17 @@ ul,li
     width: 720px; 
 	height:auto;	
     float: left;
-	margin-left:50px;
     text-align:center;
 }
 
 .sag 
 {
     
-    width: 400px;
+    width: 460px;
     height: auto;
-    margin-left:1000px;
+	margin-left:1000px;
 }
+
 
 
 @media (min-width:480px ) and (max-width:768px) {
@@ -131,7 +123,6 @@ ul,li
 
 
 .golge-efekti {
-    position: relative;
     background-color: #ffffff;
     padding: 60px 0 20px;
     font: 14px/1.5;

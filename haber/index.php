@@ -12,7 +12,8 @@ require_once("uncludes/config.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="css/style.css" rel="stylesheet" media="all"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -42,9 +43,9 @@ require_once("uncludes/config.php");
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kültür ve Sanat <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Kitap</a></li>
-          <li><a href="#">Dizi</a></li>
-          <li><a href="#">Sinema</a></li>
+          <li><a href="kitap.php">Kitap</a></li>
+          <li><a href="dizi.php">Dizi</a></li>
+          <li><a href="sinema.php">Sinema</a></li>
           <li class="divider"></li>
           <li><a href="#">Müzik</a></li>
 		  
@@ -54,15 +55,7 @@ require_once("uncludes/config.php");
       </li>
 	  <li><a href="#">Hakkında</a></li>
       <li><a href="#">İletişim</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oyun <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">FPS</a></li>
-          <li><a href="#">RPG</a></li>
-          <li><a href="#">Moba</a></li>
-          
-        </ul>
-      </li>
+     <li><a href="oyun.php">Oyun</a></li>
     </ul>
     <div class="nav navbar-nav navbar-right">
         <form class="navbar-form" role="search">
@@ -169,22 +162,18 @@ require_once("uncludes/config.php");
 				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
-						?>	
-						<h3><div class="baslik"><?php print $row["HaberBaslik"];?></div></h3>
-						<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:600px; height:300px;" /></a>
-						<div class="tarih"><?php  print $row["HaberTarih"];?></div>
-		
+						?>
+						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
+						<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
+						<h5 style="padding-top:20px; padding-left:20px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
+						
 						<?php
 					}
-				}
-				
-				 
+				}				 
 				?>
-        
-			
-		
-		</div>
-	
+      
+	</div>
         
         
 	
@@ -195,19 +184,6 @@ require_once("uncludes/config.php");
  
   
       <div class="golge-efekti yuksek">
-        <h3>Yeni haberler</h3>
-		<br>
-		<div class="baslik">
-			</div>
-			<div class="img">
-			</div>
-			<div clasS="haber">
-			</div>
-			<div class="tarih">
-			</div>
-
-
-
       
 	  <h3>En çok okunan</h3>
         <br>
@@ -218,13 +194,8 @@ require_once("uncludes/config.php");
 			<div clasS="haber">
 			</div>
 			<div class="tarih">
-			</div>
-				
-     
-
+			</div>   
 	</div>
-	
-	
 </div>
 
 
