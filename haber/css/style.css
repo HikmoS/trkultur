@@ -71,12 +71,15 @@ ul,li
 
 
 
-@media (min-width:480px ) and (max-width:768px) {
-    .container {
+@media (min-width:280px ) and (max-width:768px) {
+    .carousel {
         width: auto;
         height: auto;
     }
-  
+	.golge-efekti{
+		width:auto;
+		height:auto;
+	}
     .sag {
         display: none;
     }
@@ -89,10 +92,14 @@ ul,li
 
 
 @media (min-width:768px ) and (max-width:900px) {
-    .container {
+    .carousel {
         width: auto;
         height: auto;
     }
+	.golge-efekti{
+		width:auto;
+		height:auto;
+	}
     .sag {
         display: none;
     }
@@ -106,10 +113,14 @@ ul,li
 
 @media (min-width:900px ) and (max-width:1200px) {
 
-    .icerik {
+    .carousel {
         width: auto;
         height: auto;
     }
+	.golge-efekti{
+		width:auto;
+		height:auto;
+	}
     .sag {
         display:none;
     }

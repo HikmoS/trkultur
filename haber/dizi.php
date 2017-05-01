@@ -7,7 +7,7 @@ require_once("uncludes/config.php");
 
 <html>
 <head>
-<title>Teknoloji</title>
+<title>Dizi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="css/style2.css" rel="stylesheet" media="all"/>
@@ -53,7 +53,7 @@ require_once("uncludes/config.php");
 		
       </li>
 	  <li><a href="#">Hakkında</a></li>
-      <li><a href="#">İletişim</a></li>
+      <li><a href="spor.php">Spor</a></li>
      <li><a href="oyun.php">Oyun</a></li>
     </ul>
 	

@@ -53,7 +53,7 @@ require_once("uncludes/config.php");
 		
       </li>
 	  <li><a href="#">Hakkında</a></li>
-      <li><a href="#">İletişim</a></li>
+      <li><a href="spor.php">Spor</a></li>
      <li><a href="oyun.php">Oyun</a></li>
     </ul>
     <div class="nav navbar-nav navbar-right">
@@ -84,7 +84,7 @@ require_once("uncludes/config.php");
 								foreach($veri as $row){?>	
 						<h3 style="padding-bottom:30px;"><?php print $row["HaberBaslik"];?></h3>							
 						<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:860px; height:400px;" id="resim" />
-						<h5 style="padding-top:20px; text-align:justify;"><?php  print $row["Icerik"];?></h5>
+						<h4 style="padding-top:20px; text-align:justify; line-height:1.5; font-size:20px;"><?php  print $row["Icerik"];?></h4>
 		
 						<?php
 					}

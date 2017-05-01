@@ -53,7 +53,7 @@ require_once("uncludes/config.php");
 		
       </li>
 	  <li><a href="#">Hakkında</a></li>
-      <li><a href="#">İletişim</a></li>
+      <li><a href="spor.php">Spor</a></li>
       <li><a href="oyun.php">Oyun</a></li>
     </ul>
 	
