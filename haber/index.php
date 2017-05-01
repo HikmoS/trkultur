@@ -82,7 +82,15 @@ require_once("uncludes/config.php");
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
+                <?php
+                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=1");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				
+					?>
+						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+					<?php		
+						
+				?>
                 <div class="carousel-caption">
                     <h3>
                         Headline</h3>
@@ -92,7 +100,15 @@ require_once("uncludes/config.php");
             </div>
             <!-- End Item -->
             <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
+                <?php
+                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=2");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				
+					?>
+						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+					<?php		
+						
+				?>
                 <div class="carousel-caption">
                     <h3>
                         Headline</h3>
@@ -102,7 +118,15 @@ require_once("uncludes/config.php");
             </div>
             <!-- End Item -->
             <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
+                <?php
+                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=3");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				
+					?>
+						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+					<?php		
+						
+				?>
                 <div class="carousel-caption">
                     <h3>
                         Headline</h3>
@@ -112,7 +136,15 @@ require_once("uncludes/config.php");
             </div>
             <!-- End Item -->
             <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
+                <?php
+                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=4");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				
+					?>
+						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+					<?php		
+						
+				?>
                 <div class="carousel-caption">
                     <h3>
                         Headline</h3>
@@ -123,7 +155,15 @@ require_once("uncludes/config.php");
             <!-- End Item -->
 
             <div class="item">
-                <img src="images/dc867654-debd-410b-8ee8-a8770c4bd48b.jpg" Width="1400" />
+			<?php
+                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=5");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				
+					?>
+						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+					<?php		
+						
+				?>
                 <div class="carousel-caption">
                     <h3>
                         Headline</h3>
@@ -165,7 +205,7 @@ require_once("uncludes/config.php");
 						?>
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
-						<a href="haber.php"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
+						<a href="haber.php" onclick="haber.php=this.id+'.html';return false;"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
 						<h5 style="padding-top:20px; padding-left:20px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
 						
 						<?php
