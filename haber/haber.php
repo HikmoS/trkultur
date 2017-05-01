@@ -78,8 +78,9 @@ require_once("uncludes/config.php");
                         <div class="okunan golge-efekti yuksek">
                             
                          <?php
-							$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID AND IcerikID=1",PDO::FETCH_ASSOC);
-							if($veri->rowCount()){
+							 $al = strip_tags($_GET["id"]);
+				$veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID  WHERE  HI.HaberID=".$al."",PDO::FETCH_ASSOC);
+					if($veri->rowCount()){
 								foreach($veri as $row){?>	
 						<h3 style="padding-bottom:30px;"><?php print $row["HaberBaslik"];?></h3>							
 						<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:860px; height:400px;" id="resim" />
