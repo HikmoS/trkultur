@@ -205,7 +205,7 @@ require_once("uncludes/config.php");
 						?>
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
-						<a href="haber.php" onclick="haber.php=this.id+'.html';return false;"><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
+							<a href='haber.php?id=<?=$row["IDHaber"]?>'><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
 						<h5 style="padding-top:20px; padding-left:20px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
 						
 						<?php
