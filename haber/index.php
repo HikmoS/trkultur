@@ -83,11 +83,11 @@ require_once("uncludes/config.php");
         <div class="carousel-inner">
             <div class="item active">
                 <?php
-                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=1");
+                $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -101,11 +101,11 @@ require_once("uncludes/config.php");
             <!-- End Item -->
             <div class="item">
                 <?php
-                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=2");
+                $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1,2");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -119,11 +119,11 @@ require_once("uncludes/config.php");
             <!-- End Item -->
             <div class="item">
                 <?php
-                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=3");
+                $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 2,3");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -137,11 +137,11 @@ require_once("uncludes/config.php");
             <!-- End Item -->
             <div class="item">
                 <?php
-                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=4");
+                $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 3,4 ");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -156,11 +156,11 @@ require_once("uncludes/config.php");
 
             <div class="item">
 			<?php
-                $veri = $db -> query("SELECT * FROM haber_icerik WHERE IcerikID=5");
+                $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 4,5");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href="haber.php"><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -199,13 +199,13 @@ require_once("uncludes/config.php");
 			
 			<?php
 				
-				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID",PDO::FETCH_ASSOC);
+				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 5,15",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
 						?>
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
-							<a href='haber.php?id=<?=$row["IDHaber"]?>'><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$row["IDHaber"]?>'><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
 						<h5 style="padding-top:20px; padding-left:20px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
 						
 						<?php
