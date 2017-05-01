@@ -92,10 +92,14 @@ require_once("uncludes/config.php");
 						
 				?>
                 <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                       Lorem ipsum Lorem ipsum Lorem ipsum</p>
+				<?php
+				 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <h3 style="padding-bottom:20px;"><?php print $veri["HaberBaslik"];?></h3>
+				 <?php 
+				 ?>  
+				   
                 </div>
             </div>
             <!-- End Item -->
@@ -110,10 +114,13 @@ require_once("uncludes/config.php");
 						
 				?>
                 <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                   <?php
+				 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1,2");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <h3 style="padding-bottom:20px;"><?php print $veri["HaberBaslik"];?></h3>
+				 <?php 
+				 ?>  
                 </div>
             </div>
             <!-- End Item -->
@@ -128,10 +135,13 @@ require_once("uncludes/config.php");
 						
 				?>
                 <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                    <?php
+				 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 2,3");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <h3 style="padding-bottom:20px;"><?php print $veri["HaberBaslik"];?></h3>
+				 <?php 
+				 ?>  
                 </div>
             </div>
             <!-- End Item -->
@@ -146,10 +156,13 @@ require_once("uncludes/config.php");
 						
 				?>
                 <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum  Lorem ipsum Lorem ipsum</p>
+                  <?php
+				 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 3,4");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <h3 style="padding-bottom:20px;"><?php print $veri["HaberBaslik"];?></h3>
+				 <?php 
+				 ?>  
                 </div>
             </div>
             <!-- End Item -->
@@ -165,10 +178,13 @@ require_once("uncludes/config.php");
 						
 				?>
                 <div class="carousel-caption">
-                    <h3>
-                        Headline</h3>
-                    <p>
-                        Lorem ipsum Lorem ipsum Lorem ipsum</p>
+                   <?php
+				 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 4,5");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <h3 style="padding-bottom:20px;"><?php print $veri["HaberBaslik"];?></h3>
+				 <?php 
+				 ?>  
                 </div>
             </div>
 
