@@ -77,25 +77,29 @@ require_once("uncludes/config.php");
                     
                         <div class="okunan golge-efekti yuksek">
                             
-                         <?php
-							 $al = strip_tags($_GET["id"]);
-							 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID  WHERE  HI.HaberID=".$al."",PDO::FETCH_ASSOC);
-							 if($veri->rowCount()){
+                         <?php  
+							$al = strip_tags($_GET["id"]);
+							$db -> query("update haber set OSayisi=OSayisi+1 where IDHaber =".$al."",PDO::FETCH_ASSOC);
+							$veri2 = $db -> prepare("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID  WHERE  HI.HaberID=?");
+              $veri2->execute(array(($al)));
+              $veri = $veri2->fetchAll(PDO::FETCH_ASSOC);
+
+
+							if($veri){
 								foreach($veri as $row){?>	
 						<h3 style="padding-bottom:30px;"><?php print $row["HaberBaslik"];?></h3>							
 						<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:860px; height:400px;" id="resim" />
 						<h4 style="padding-top:20px; text-align:justify; line-height:1.5; font-size:20px;"><?php  print $row["Icerik"];?></h4>
-		
+						
 						<?php
 					}
 				}
 				
 				 
-				?>
-							
-						
-                                                      
-                     </div>
+			?>
+					 
+					 
+					 </div>
 
    
 </body>

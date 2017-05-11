@@ -87,9 +87,11 @@ require_once("uncludes/config.php");
 			
 			<?php
 				
-				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID AND KategoriID=1",PDO::FETCH_ASSOC);
-				if($veri->rowCount()){
-					foreach($veri as $row){
+				$veri = $db -> prepare("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID AND KategoriID=?");
+        $veri -> execute(array(1));
+        $veri2 = $veri->fetchAll();
+				if($veri2){
+					foreach($veri2 as $row){
 						?>
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						

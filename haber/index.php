@@ -3,6 +3,7 @@ require_once("uncludes/config.php");
 ?>
 
 
+
 <!DOCTYPE html>
 
 <html>
@@ -10,7 +11,7 @@ require_once("uncludes/config.php");
 <title>Anasayfa</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="css/style.css" rel="stylesheet" media="all"/>
+<link href="css/still2.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -75,8 +76,10 @@ require_once("uncludes/config.php");
      
 	
 	
-	
+	    
+	<div class="container" style="width:1500px;">	
 		
+			
   
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
@@ -87,7 +90,7 @@ require_once("uncludes/config.php");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -109,7 +112,7 @@ require_once("uncludes/config.php");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style="width:1400px; height:500px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -130,7 +133,7 @@ require_once("uncludes/config.php");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -151,7 +154,7 @@ require_once("uncludes/config.php");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -173,7 +176,7 @@ require_once("uncludes/config.php");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
 				
 					?>
-						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px;" id="resim" /></a>
+						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
 						
 				?>
@@ -191,16 +194,52 @@ require_once("uncludes/config.php");
         </div>
         <!-- End Carousel Inner -->
         <ul class="nav nav-pills nav-justified">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem
-                ipsum dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="1"><a href="#">Oyun<small>Lorem ipsum
-                dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="2"><a href="#">Kültür ve Sanat<small>Lorem ipsum
-                dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="3"><a href="#">Dizi<small>Lorem ipsum
-                dolor sit</small></a></li>
-            <li data-target="#myCarousel" data-slide-to="4"><a href="#">Sinema<small>Lorem ipsum
-                dolor sit</small></a></li>
+		 <?php
+				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 1");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <li data-target="#myCarousel" data-slide-to="0"><a href="#"><?php print $veri["Kategori"]?></a></li>
+				 <?php 
+				 ?>  
+            
+			 <?php
+				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 1,2");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <li data-target="#myCarousel" data-slide-to="1"><a href="#" ><?php print $veri["Kategori"]?></a></li>
+				 <?php 
+				 ?> 
+
+
+
+				<?php
+				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 2,3");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <li data-target="#myCarousel" data-slide-to="2"><a href="#"><?php print $veri["Kategori"]?></a></li>
+				 <?php 
+				 ?>  
+				 
+				 
+				 
+				 
+				 <?php
+				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 3,4");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <li data-target="#myCarousel" data-slide-to="3"><a href="#" ><?php print $veri["Kategori"]?></a></li>
+				 <?php 
+				 ?>  
+			
+			
+			
+			<?php
+				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 4,5");
+				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				?>
+                   <li data-target="#myCarousel" data-slide-to="4"><a href="#"><?php print $veri["Kategori"]?></a></li>
+				 <?php 
+				 ?>  
         </ul>
     </div>
     <!-- End Carousel -->
@@ -208,10 +247,7 @@ require_once("uncludes/config.php");
 	
 	
 
-    
-		<div class="icerik golge-efekti yuksek">
-			
-			
+<div class="icerik golge-efekti yuksek">
 			
 			<?php
 				
@@ -219,19 +255,18 @@ require_once("uncludes/config.php");
 				if($veri->rowCount()){
 					foreach($veri as $row){
 						?>
+						
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
 						<a href='haber.php?id=<?=$row["IDHaber"]?>'><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:660px; height:300px;" id="resim" /></a>
-						<h5 style="padding-top:20px; padding-left:20px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
+						<h5 style="padding-top:20px; padding-left:60px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
 						
 						<?php
 					}
 				}				 
-				?>
-      
-	</div>
-        
-        
+				?> 
+	  
+        </div>	
 	
 	
 
@@ -239,19 +274,32 @@ require_once("uncludes/config.php");
 	<div class="sag">
  
   
-      <div class="golge-efekti yuksek">
+     <div class="golge-efekti yuksek">
+			<h3>En çok okunan Haberler</h3>
+			<br>
       
-	  <h3>En çok okunan</h3>
-        <br>
-			<div class="baslik">
-			</div>
-			<div class="img">
-			</div>
-			<div clasS="haber">
-			</div>
-			<div class="tarih">
-			</div>   
-	</div>
+			<?php
+				
+				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID ORDER BY OSayisi DESC LIMIT 0,5",PDO::FETCH_ASSOC);
+				if($veri->rowCount()){
+					foreach($veri as $row){
+						?>
+						
+						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
+						<a href='haber.php?id=<?=$row["IDHaber"]?>'><img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:360px; height:200px;" id="resim" /></a>
+						<h5 style="padding-top:20px; padding-left:60px; text-align:justify;"><?php  print $row["HaberTarih"];?></h5>		
+						
+						<?php
+					}
+				}				 
+				?>
+				
+	 </div>	
+			
+			
+			
+	
 </div>
 
 
@@ -264,7 +312,7 @@ require_once("uncludes/config.php");
 
 </footer> -->
 
-
+</div>
 
 
 

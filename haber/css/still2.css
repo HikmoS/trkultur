@@ -1,0 +1,170 @@
+body {   
+    margin:0;
+    padding:0;
+}
+
+
+* {
+padding:0;
+margin:0;
+}
+
+
+ul,li
+{
+    list-style-type:none;
+}
+
+
+.carousel {
+    width: 1400px;
+    margin: 75px auto;
+    position: relative;
+}
+
+
+#myCarousel .nav a small {
+    display: block;
+}
+
+#myCarousel .nav {
+    background: #ffffff;
+}
+
+.nav-justified > li > a {
+    border-radius: 0px;
+}
+
+
+
+.nav-pills > li[data-slide-to="0"] a:hover{
+   background-color: #2980b9;
+}
+.nav-pills > li[data-slide-to="1"] a:hover{
+    background-color: #8e44ad;
+}
+
+.nav-pills > li[data-slide-to="2"] a:hover {
+    background-color: #2980b9;
+}
+
+.nav-pills > li[data-slide-to="3"] a:hover {
+    background-color: #8e44ad;
+}
+
+.nav-pills > li[data-slide-to="4"] a:hover {
+    background-color: #2980b9;
+}
+
+
+.icerik {
+    width: 820px; 
+	height:auto;	
+    text-align:center;
+	float:left;
+}
+
+.sag 
+{
+    
+    width: 460px;
+    height: auto;
+	float:right;
+	margin-right:80px;
+}
+
+
+
+@media (min-width:280px ) and (max-width:768px) {
+    .carousel {
+        width: auto;
+        height: auto;
+    }
+	.golge-efekti{
+		width:auto;
+		height:auto;
+	}
+    .sag {
+        display: none;
+    }
+    #myCarousel {
+        width: 100%;
+        height:100%;
+    }
+   
+}
+
+
+@media (min-width:768px ) and (max-width:900px) {
+    .carousel {
+        width: auto;
+        height: auto;
+    }
+	.golge-efekti{
+		width:auto;
+		height:auto;
+	}
+    .sag {
+        display: none;
+    }
+    #myCarousel {
+        width: 100%;
+        height: 100%;
+    }
+   
+   
+}
+
+@media (min-width:900px ) and (max-width:1200px) {
+
+    .carousel {
+        width: auto;
+        height: auto;
+    }
+	.golge-efekti{
+		width:auto;
+		height:auto;
+	}
+    .sag {
+        display:none;
+    }
+    #myCarousel {
+        width: 100%;
+        height: 100%;
+    }
+ 
+  
+}
+
+
+.golge-efekti {
+    background-color: #ffffff;
+    padding: 60px 0 20px;
+    font: 14px/1.5;
+    padding: 1em;
+    color: #666;
+    text-shadow: 0px 1px 3px #fff;
+    text-align: center;
+    margin: 0 auto 0 60px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+    .golge-efekti:before,
+    .golge-efekti:after {
+        content: "";
+        position: absolute;
+        z-index: -2;
+    }
+
+    .golge-efekti p {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+.yuksek {
+    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
