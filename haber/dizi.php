@@ -93,6 +93,14 @@ require_once("uncludes/config.php");
 
         if($veri2){
 					foreach($veri2 as $row){
+            $id = $row["sil"];
+            $_GET["sil"]= $id;
+            if($_GET["sil"]){
+            $bakma = $db -> prepare("SELECT sil FROM haber WHERE IDHaber=?");
+            $bakma-> execute(array($_GET["sil"]));
+            $bakma2 = $bakma->fetch();
+            if($bakma2["sil"]=="1"){ 
+
 						?>
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
 						<h3 style="padding-bottom:20px;"><?php print $row["HaberBaslik"];?></h3>						
@@ -101,7 +109,9 @@ require_once("uncludes/config.php");
 						
 						<?php
 					}
-				}				 
+				}			
+        }
+        }	 
 				?>
 			
 			

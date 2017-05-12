@@ -86,7 +86,16 @@ require_once("uncludes/config.php");
 
 
 							if($veri){
-								foreach($veri as $row){?>	
+								foreach($veri as $row){
+                  $id = $row ["IDHaber"];
+                  $_GET["sil"] = $id;
+                  if($_GET["sil"]){
+                    $bakma =$db-> prepare("SELECT sil FROM haber WHERE IDHaber=?");
+                    $bakma -> execute(array($_GET["sil"]));
+                    $bakma2 = $bakma -> fetch();
+
+                    if($bakma2["sil"]=="1"){  
+                  ?>	
 						<h3 style="padding-bottom:30px;"><?php print $row["HaberBaslik"];?></h3>							
 						<img src="<?php echo $row["Foto1"];?>" alt="Resim" style=" width:860px; height:400px;" id="resim" />
 						<h4 style="padding-top:20px; text-align:justify; line-height:1.5; font-size:20px;"><?php  print $row["Icerik"];?></h4>
@@ -94,8 +103,8 @@ require_once("uncludes/config.php");
 						<?php
 					}
 				}
-				
-				 
+				}
+				 }
 			?>
 					 
 					 
