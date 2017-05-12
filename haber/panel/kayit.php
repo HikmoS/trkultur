@@ -15,7 +15,7 @@ require_once("ayar.php");
 <body>
 
 <?php
-if(strip_tags(@$_GET['kod'])=="serefsiz@kullanicilar5569" )
+if(strip_tags(@$_GET['kod'])=="biz@bir@aileyiz5569" )
 {kayit();}
 
 else
