@@ -88,16 +88,26 @@ require_once("uncludes/config.php");
                 <?php
                 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
-				
+				$id = $veri["IDHaber"];
+				$_GET["sil"]=$id;
+				if($_GET["sil"])
+				{
+				$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+				$bakma->execute(array($_GET['sil']));
+				$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+				if($bakma2["sil"]=="1"){
+
 					?>
 						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
-						
+					}
+				}	
 				?>
                 <div class="carousel-caption">
 				<?php
 				 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+
 				?>
                    <h3 style="padding-bottom:20px;"><?php print $veri["HaberBaslik"];?></h3>
 				 <?php 
@@ -110,11 +120,19 @@ require_once("uncludes/config.php");
                 <?php
                 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 1,2");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
-				
+					$id = $veri["IDHaber"];
+					$_GET["sil"]=$id;
+					if($_GET["sil"])
+					{
+					$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+					$bakma->execute(array($_GET['sil']));
+					$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+					if($bakma2["sil"]=="1"){
 					?>
 						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style="width:1400px; height:500px;" id="resim" /></a>
 					<?php		
-						
+						}
+					}
 				?>
                 <div class="carousel-caption">
                    <?php
@@ -131,11 +149,19 @@ require_once("uncludes/config.php");
                 <?php
                 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 2,3");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
-				
+					$id = $veri["IDHaber"];
+					$_GET["sil"]=$id;
+					if($_GET["sil"])
+					{
+					$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+					$bakma->execute(array($_GET['sil']));
+					$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+					if($bakma2["sil"]=="1"){
 					?>
 						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
-						
+						}
+					}
 				?>
                 <div class="carousel-caption">
                     <?php
@@ -152,11 +178,19 @@ require_once("uncludes/config.php");
                 <?php
                 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 3,4 ");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
-				
+					$id = $veri["IDHaber"];
+					$_GET["sil"]=$id;
+					if($_GET["sil"])
+					{
+					$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+					$bakma->execute(array($_GET['sil']));
+					$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+					if($bakma2["sil"]=="1"){
 					?>
 						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
-						
+						}
+					}
 				?>
                 <div class="carousel-caption">
                   <?php
@@ -174,11 +208,19 @@ require_once("uncludes/config.php");
 			<?php
                 $veri = $db -> query("SELECT * FROM haber H INNER JOIN haber_icerik HI ON H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 4,5");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
-				
+					$id = $veri["IDHaber"];
+					$_GET["sil"]=$id;
+					if($_GET["sil"])
+					{
+					$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+					$bakma->execute(array($_GET['sil']));
+					$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+					if($bakma2["sil"]=="1"){
 					?>
 						<a href='haber.php?id=<?=$veri["IDHaber"]?>'><img src="<?php echo $veri["Foto1"];?>" alt="Resim" style=" width:1400px; height:500px;" id="resim" /></a>
 					<?php		
-						
+						}
+					}
 				?>
                 <div class="carousel-caption">
                    <?php
@@ -197,17 +239,37 @@ require_once("uncludes/config.php");
 		 <?php
 				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 1");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				$id = $veri["IDHaber"];
+				$_GET["sil"]=$id;
+				if($_GET["sil"])
+				{
+				$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+				$bakma->execute(array($_GET['sil']));
+				$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+				if($bakma2["sil"]=="1"){
 				?>
                    <li data-target="#myCarousel" data-slide-to="0"><a href="#"><?php print $veri["Kategori"]?></a></li>
 				 <?php 
+				}
+			}
 				 ?>  
             
 			 <?php
 				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 1,2");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				$id = $veri["IDHaber"];
+				$_GET["sil"]=$id;
+				if($_GET["sil"])
+				{
+				$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+				$bakma->execute(array($_GET['sil']));
+				$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+				if($bakma2["sil"]=="1"){
 				?>
                    <li data-target="#myCarousel" data-slide-to="1"><a href="#" ><?php print $veri["Kategori"]?></a></li>
-				 <?php 
+				 <?php
+				 }
+				} 
 				 ?> 
 
 
@@ -215,9 +277,19 @@ require_once("uncludes/config.php");
 				<?php
 				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 2,3");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				$id = $veri["IDHaber"];
+				$_GET["sil"]=$id;
+				if($_GET["sil"])
+				{
+				$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+				$bakma->execute(array($_GET['sil']));
+				$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+				if($bakma2["sil"]=="1"){
 				?>
                    <li data-target="#myCarousel" data-slide-to="2"><a href="#"><?php print $veri["Kategori"]?></a></li>
 				 <?php 
+				}
+			}
 				 ?>  
 				 
 				 
@@ -226,9 +298,19 @@ require_once("uncludes/config.php");
 				 <?php
 				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 3,4");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				$id = $veri["IDHaber"];
+				$_GET["sil"]=$id;
+				if($_GET["sil"])
+				{
+				$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+				$bakma->execute(array($_GET['sil']));
+				$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+				if($bakma2["sil"]=="1"){
 				?>
                    <li data-target="#myCarousel" data-slide-to="3"><a href="#" ><?php print $veri["Kategori"]?></a></li>
 				 <?php 
+				}
+			}
 				 ?>  
 			
 			
@@ -236,9 +318,19 @@ require_once("uncludes/config.php");
 			<?php
 				 $veri = $db -> query("SELECT * FROM kategori K INNER JOIN haber H ON K.KatID = H.KategoriID ORDER BY H.IDHaber DESC LIMIT 4,5");
 				$veri = $veri -> fetch(PDO::FETCH_ASSOC);
+				$id = $veri["IDHaber"];
+				$_GET["sil"]=$id;
+				if($_GET["sil"])
+				{
+				$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+				$bakma->execute(array($_GET['sil']));
+				$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+				if($bakma2["sil"]=="1"){
 				?>
                    <li data-target="#myCarousel" data-slide-to="4"><a href="#"><?php print $veri["Kategori"]?></a></li>
 				 <?php 
+				}
+			}
 				 ?>  
         </ul>
     </div>
@@ -254,6 +346,14 @@ require_once("uncludes/config.php");
 				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID ORDER BY H.IDHaber DESC LIMIT 5,15",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
+					$id = $row["IDHaber"];
+					$_GET["sil"]=$id;
+					if($_GET["sil"])
+					{
+					$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+					$bakma->execute(array($_GET['sil']));
+					$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+					if($bakma2["sil"]=="1"){
 						?>
 						
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
@@ -263,6 +363,8 @@ require_once("uncludes/config.php");
 						
 						<?php
 					}
+				}
+			}
 				}				 
 				?> 
 	  
@@ -283,6 +385,14 @@ require_once("uncludes/config.php");
 				$veri = $db -> query("SELECT * FROM haber H, haber_icerik HI WHERE H.IDHaber = HI.HaberID ORDER BY OSayisi DESC LIMIT 0,5",PDO::FETCH_ASSOC);
 				if($veri->rowCount()){
 					foreach($veri as $row){
+						$id = $row["IDHaber"];
+					$_GET["sil"]=$id;
+					if($_GET["sil"])
+					{
+					$bakma=$db-> prepare("SELECT sil FROM haber_icerik WHERE HaberID=?");
+					$bakma->execute(array($_GET['sil']));
+					$bakma2 =$bakma->fetch(PDO::FETCH_ASSOC);	
+					if($bakma2["sil"]=="1"){
 						?>
 						
 						<hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
@@ -292,7 +402,9 @@ require_once("uncludes/config.php");
 						
 						<?php
 					}
-				}				 
+				}		
+			}
+		}		 
 				?>
 				
 	 </div>	

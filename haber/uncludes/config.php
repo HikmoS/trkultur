@@ -4,4 +4,5 @@ try {
 } catch ( PDOException $e ){
      print $e->getMessage();
 }
+session_start();
 ?>
